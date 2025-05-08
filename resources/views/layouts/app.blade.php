@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-    @if (request()->routeIs('dashboard'))
-        Dashboard
-    @elseif (request()->routeIs('books.index'))
-        Table Buku
-    @elseif (request()->routeIs('books.create'))
-        Buat buku
-    @elseif (request()->routeIs('user'))
-        Table User
-    @endif
+        @if (request()->routeIs('dashboard'))
+            Dashboard
+        @elseif (request()->routeIs('books.index'))
+            Table Buku
+        @elseif (request()->routeIs('books.create'))
+            Buat buku
+        @elseif (request()->routeIs('user'))
+            Table User
+        @endif
     </title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -120,6 +120,23 @@
                 reader.readAsDataURL(file);
             }
         });
+
+        function confirmLogout() {
+            Swal.fire({
+                title: 'Yakin mau logout?',
+                text: "Kamu akan keluar dari akun ini.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#EF4444', // merah
+                cancelButtonColor: '#6B7280', // abu
+                confirmButtonText: 'Iya, logout',
+                cancelButtonText: 'Batal'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.getElementById('logout-form').submit();
+                }
+            });
+        }
     </script>
 
 </body>

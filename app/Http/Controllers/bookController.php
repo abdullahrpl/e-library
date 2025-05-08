@@ -119,6 +119,7 @@ class bookController extends Controller
         $data->tahunterbit = $request->tahunterbit;
         $data->jumlahhalaman = $request->jumlahhalaman;
         $data->deskripsi = $request->deskripsi;
+        $data->kategori = $request->kategori;
 
 
         if ($request->hasFile('coverbuku')) {

@@ -9,18 +9,18 @@
             </div>
 
             @if (request()->routeIs('admin'))
-            <h1 class="text-3xl font-bold text-gray-800">ADMIN</h1>
-            <p class="text-gray-600 mt-2">Masuk ke akun ADMIN Anda</p> 
+                <h1 class="text-3xl font-bold text-gray-800">ADMIN</h1>
+                <p class="text-gray-600 mt-2">Masuk ke akun ADMIN Anda</p>
             @else
-            <h1 class="text-3xl font-bold text-gray-800">E-Library</h1>
-            <p class="text-gray-600 mt-2">Masuk ke akun Anda</p>
+                <h1 class="text-3xl font-bold text-gray-800">E-Library</h1>
+                <p class="text-gray-600 mt-2">Masuk ke akun Anda</p>
             @endif
         </div>
 
         <!-- Login Form -->
         <div class="bg-white rounded-lg shadow-md p-6">
-            <form action="{{route('login')}}" method="POST" class="space-y-6">
-            @csrf
+            <form action="{{ route('login') }}" method="POST" class="space-y-6">
+                @csrf
                 <!-- Email/Username Field -->
                 <div class="space-y-2">
                     <label for="email" class="block text-sm font-medium text-gray-700">Username</label>
@@ -71,6 +71,16 @@
                 </div>
             </form>
 
+            @if ($errors->any())
+                <script>
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Login gagal',
+                        text: '{{ $errors->first() }}'
+                    });
+                </script>
+            @endif
+            
             <!-- Divider -->
             <div class="mt-6">
                 <div class="relative">
@@ -102,7 +112,8 @@
         <div class="text-center mt-4">
             <p class="text-sm text-gray-600">
                 Belum punya akun?
-                <a href="{{route('register.show')}}" class="font-medium text-indigo-600 hover:text-indigo-500">Daftar sekarang</a>
+                <a href="{{ route('register.show') }}" class="font-medium text-indigo-600 hover:text-indigo-500">Daftar
+                    sekarang</a>
             </p>
         </div>
     </div>

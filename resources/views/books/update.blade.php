@@ -52,18 +52,17 @@
                             </div>
 
                             <div class="space-y-2">
-                                <label for="category" class="block text-sm font-medium text-gray-700">Ubah Kategori
-                                    Buku</label>
-                                <select id="category"
+                                <label for="category" class="block text-sm font-medium text-gray-700">Kategori Buku<span class=" text-red-500">*</span></label>
+                                <select id="category" name="kategori"
                                     class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
                                     <option value="">Pilih kategori</option>
-                                    <option value="fiction">Fiksi</option>
-                                    <option value="non-fiction">Non-Fiksi</option>
-                                    <option value="science">Sains</option>
-                                    <option value="technology">Teknologi</option>
-                                    <option value="history">Sejarah</option>
-                                    <option value="biography">Biografi</option>
-                                    <option value="education">Pendidikan</option>
+                                    <option value="fiksi">Fiksi</option>
+                                    <option value="non-fiksi">Non-Fiksi</option>
+                                    <option value="sains">Sains</option>
+                                    <option value="teknologi">Teknologi</option>
+                                    <option value="sejarah">Sejarah</option>
+                                    <option value="biografi">Biografi</option>
+                                    <option value="pendidikan">Pendidikan</option>
                                 </select>
                             </div>
 

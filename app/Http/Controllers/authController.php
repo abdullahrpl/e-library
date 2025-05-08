@@ -20,7 +20,7 @@ class authController extends Controller
         return view('auth.register');
     }
 
-    
+
     /**
      * Make new account
      */
@@ -39,6 +39,7 @@ class authController extends Controller
         // $data->role = 'admin';
         $data->save();
         Auth::login($data);
+        $request->session()->flash('welcome', 'Selamat datang, ' . $data->username . '!');
 
         return redirect()->route('home');
     }
@@ -57,18 +58,19 @@ class authController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('username', 'password');
-    
+
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
+            $request->session()->flash('welcome', 'Selamat datang kembali, ' . Auth::user()->username . '!');
             if (Auth::user()->role === 'admin') {
                 return redirect()->route('dashboard'); // route ke admin
             } else {
                 return redirect()->route('home'); // route user biasa
             }
         }
-    
+
         return back()->withErrors([
-            'email' => 'Email atau password salah.',
+            'username' => 'Username atau password salah.',
         ]);
     }
 

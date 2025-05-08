@@ -28,7 +28,7 @@
                     <button class="flex items-center gap-2 px-2 py-1 rounded-md hover:bg-gray-100"
                         onclick="toggleDropdown()">
                         <div class="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center">
-                            <span class="text-sm font-medium">AD</span>
+                            <img class="text-sm font-medium" src="https://static.vecteezy.com/system/resources/previews/000/439/863/non_2x/vector-users-icon.jpg">
                         </div>
                         <span class="hidden md:inline-block capitalize">{{ Auth::user()->username }}</span>
                         <i class="fa fa-chevron-down text-xs opacity-50"></i>
@@ -50,13 +50,14 @@
                             </a>
                         </div>
                         <div class="py-1 border-t border-gray-200">
-                            <form method="POST" action="{{ route('logout') }}">
+                            <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
                                 @csrf
-                                <button type="submit" class="flex items-center px-4 py-2 text-sm text-red-500 hover:bg-gray-100 w-full text-left">
-                                    <i class="fa fa-sign-out-alt mr-2 text-sm"></i>
-                                    <span>Keluar</span>
-                                </button>
                             </form>
+                            
+                            <button onclick="confirmLogout()" class="flex items-center px-4 py-2 text-sm text-red-500 hover:bg-gray-100 w-full text-left">
+                                <i class="fa fa-sign-out-alt mr-2 text-sm"></i>
+                                <span>Keluar</span>
+                            </button>
                         </div>
                     </div>
                 </div>
