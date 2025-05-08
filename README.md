@@ -1,8 +1,10 @@
-# E-Library
+<br></br>
+# 📚 E-Library
 
 E-Library adalah platform digital untuk mengelola koleksi buku, di mana pengguna dapat mencari, menambah, dan mengedit buku dalam koleksi. Sistem ini juga menyediakan fitur untuk pengguna terdaftar untuk mengelola profil mereka. E-Library dibangun menggunakan Laravel, dengan antarmuka pengguna berbasis HTML, CSS, dan JavaScript.
 
-## Fitur
+<br></br>
+## ✨ Fitur
 
 ### 1. **Login dan Register**
    - Pengguna dapat mendaftar dan login untuk mengakses fitur pribadi.
@@ -29,14 +31,16 @@ E-Library adalah platform digital untuk mengelola koleksi buku, di mana pengguna
    - Pengguna dapat memperbarui informasi profil mereka.
    - **Fitur ini sudah tersedia**, namun masih ada beberapa pengembangan yang perlu dilakukan untuk mendukung fitur lebih lanjut, seperti upload foto profil.
 
-## Teknologi yang Digunakan
+<br></br>
+## 🔧 Teknologi yang Digunakan
 - **Backend**: Laravel
 - **Frontend**: HTML, CSS (TailwindCSS), JavaScript (SweetAlert, jQuery)
 - **Database**: MySQL
 - **Authentication**: Laravel Passport untuk API, Laravel Auth untuk session-based authentication
 - **Fitur UI**: SweetAlert2 untuk konfirmasi dan error messages
 
-## Cara Menjalankan Proyek
+<br></br>
+## 🚀 Cara Menjalankan Proyek
 
 1. **Clone Repository**
    ```bash
@@ -60,7 +64,7 @@ E-Library adalah platform digital untuk mengelola koleksi buku, di mana pengguna
    php artisan migrate
    
 5. **Jalankan Seeder**
-   Jalankan seeder untuk mengisi data awal user admin
+   Jalankan seeder untuk mengisi data awal user admin:
    ```bash
    php artisan db:seed
 
@@ -69,5 +73,47 @@ E-Library adalah platform digital untuk mengelola koleksi buku, di mana pengguna
    ```bash
    php artisan serve
    
-   
-   
+<br></br>
+
+## 👤 Akun Demo
+
+### Admin
+
+- **Email**: `admin@gmail.com`  
+- **Password**: `admin123`
+
+### User
+
+- **Email**: `user@gmail.com`  
+- **Password**: `user123`
+
+<br></br>
+## 📝 Fitur yang Masih Dalam Pengembangan
+
+Berikut adalah beberapa fitur yang saat ini sedang dalam pengembangan atau akan segera ditambahkan:
+
+- **Pengaturan Profil**  
+  Fitur untuk mengubah pengaturan akun dan profil pengguna.
+
+- **Filter Buku**  
+  Penyempurnaan filter buku untuk memudahkan pengguna menemukan buku sesuai kategori, tag, atau tahun.
+
+- **Pencarian Buku**  
+  Pengembangan sistem pencarian buku yang lebih cepat dan akurat.
+
+<br></br>
+## 🤝 Kontribusi
+
+Punya ide keren atau nemu bug? Yuk, bantu kembangkan proyek ini bareng-bareng! Gini caranya buat ikutan kontribusi:
+
+1. **Fork** repo ini dulu biar punya salinan sendiri.
+2.Bikin cabang baru buat fitur kamu:
+   ```bash
+   git checkout -b fitur-anda
+3. Ubah atau tambahkan yang perlu kamu ubah.
+4. Commit perubahan kamu:
+   ```bash
+   git commit -am "Menambahkan fitur baru"
+5. Push ke repo kamu:
+   ```bash
+   git push origin fitur-anda
