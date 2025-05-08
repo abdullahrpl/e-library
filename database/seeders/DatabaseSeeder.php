@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
             'judulbuku' => 'Ini Kemana?',
             'penulis' => 'Abdullah',
             'publisher' => 'Abdullah Co.',
-            'tahunterbit' => 2025,
+            'tahunterbit' => 2024,
             'deskripsi' => 'Tentang seseorang yang menelusuri sebuah jalan yang tidak tahu akan menuju kemana, berakhir dimana, apakah ada akhirnya?.',
             'jumlahhalaman' => 350,
             'coverbuku' => 'cover2.png',
