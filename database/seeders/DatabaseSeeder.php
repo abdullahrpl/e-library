@@ -3,8 +3,10 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\Book;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,9 +17,40 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+        User::create([
+            'username' => 'admin',
+            'email' => 'admin@gmail.com',
+            'password' => Hash::make('admin123'),
+            'role' => 'admin'
+        ]);
+
+        User::create([
+            'username' => 'user',
+            'email' => 'user@gmail.com',
+            'password' => Hash::make('user123'),
+            'role' => 'user'
+        ]);
+
+        Book::create([
+            'judulbuku' => 'Ini Kemana?',
+            'penulis' => 'Abdullah',
+            'publisher' => 'Abdullah Co.',
+            'tahunterbit' => 2025,
+            'deskripsi' => 'Tentang seseorang yang menelusuri sebuah jalan yang tidak tahu akan menuju kemana, berakhir dimana, apakah ada akhirnya?.',
+            'jumlahhalaman' => 350,
+            'coverbuku' => 'cover2.png',
+            'kategori' => 'Fiksi'
+        ]);
+
+        Book::create([
+            'judulbuku' => 'Rumah',
+            'penulis' => 'Abdullah',
+            'publisher' => 'Abdullah Co.',
+            'tahunterbit' => 2023,
+            'deskripsi' => 'Terkadang rumah bukanlah tempat terbaik untuk mengistirahatkan lelah, peluh atau mungkin untuk menenangkan diri.',
+            'jumlahhalaman' => 250,
+            'coverbuku' => 'cover3.png',
+            'kategori' => 'Fiksi'
         ]);
     }
 }
